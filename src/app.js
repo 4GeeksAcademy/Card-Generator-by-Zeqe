@@ -27,17 +27,14 @@ window.onload = function() {
     const randomSuit = suits[Math.floor(Math.random() * suits.length)];
     const randomValue = values[Math.floor(Math.random() * values.length)];
 
-    // Seleccionar los elementos del DOM
     const topSuit = document.getElementById("top-suit");
     const bottomSuit = document.getElementById("bottom-suit");
     const cardValue = document.getElementById("card-value");
 
-    // Asignar los valores
     topSuit.innerHTML = randomSuit;
     bottomSuit.innerHTML = randomSuit;
     cardValue.innerHTML = randomValue;
 
-    // Si la carta es ♥ o ♦, se les aplica la clase "red"
     if (randomSuit === "♥" || randomSuit === "♦") {
       topSuit.classList.add("red");
       bottomSuit.classList.add("red");
@@ -49,6 +46,5 @@ window.onload = function() {
     }
   }
 
-  // Llamar a la función para mostrar una carta cuando se cargue la página
   getRandomCard();
 };
